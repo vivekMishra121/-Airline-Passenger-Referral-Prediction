@@ -54,3 +54,17 @@ The primary objective is to deploy a robust classifier model that accurately pre
 10. Deployment File
     * Pickle
     * Joblib
+ # Conclusion
+ Our dataset consists of airline reviews spanning from 2006 to 2019, covering various popular airlines worldwide. It comprises 131,895 rows and 17 columns. To enhance data quality, you performed several data preprocessing steps, including converting date columns to datetime format, adjusting rating columns, and addressing issues with the "date_flown" column and tackling our NaN values.
+
+During Exploratory Data Analysis (EDA), you discovered that the majority of customers (72%) opt for the economic class, followed by 19.4% in business class. Ratings predominantly fall within the 1-5 range, except for the "overall_rating," which ranges from 1-10. Insights from the EDA process informed your subsequent hypothesis testing, where t-tests, chi-square, and ANOVA tests were employed to validate assumptions.
+
+Feature engineering involved encoding categorical variables and implementing Principal Component Analysis (PCA) for dimensionality reduction. The decision to retain only the first six principal components, explaining 92% of the data variance, allows for a more streamlined dataset with reduced complexity. Finally, the data was split into a training set (70%) and a testing set (30%) for model development and evaluation.
+
+For the classification problem, four models were employed: `Decision Tree`, `KNN`, `SVM`, and` Random Forest`. Initially, the Decision Tree model exhibited overfitting, but through cross-validation and hyperparameter tuning, this issue was mitigated. Subsequent models, including KNN, SVM, and Random Forest, were then applied.
+
+In terms of classification metrics, the business context prioritized F1_score, followed by Precision and Recall, with accuracy considered third. All four models achieved accuracy rates exceeding 90%, and after evaluation, SVM emerged as the top-performing model by a slight margin.
+
+The evaluation metrics comparison highlighted SVM's superior accuracy, making it the preferred choice among the models tested. Notably, the most influential features contributing to predictions were identified as "Value for money" and "cabin_service."
+
+The developed classifier models are valuable for predicting passenger referrals, allowing airlines to identify impactful passengers who can potentially bring in more revenue. The insights gained from the models suggest that improving cabin service, ground service, food and beverage offerings, entertainment, and seat comfort will enhance the likelihood of passengers recommending the airline to others. This strategic focus on key features can contribute to business growth and increased customer satisfaction.
